@@ -1,5 +1,12 @@
 <div class="container">
   <h2>Welcome!</h2>
+  <div *ngIf="isLoggedIn; else loginButton" class="userinfo">
+    {{userdata}}
+  </div>
 </div>
+
+<ng-template #loginButton>
+  Please friend, login.
+</ng-template>
 
 <router-outlet></router-outlet>
